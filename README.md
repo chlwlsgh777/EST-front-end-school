@@ -1,2 +1,2 @@
 # EST-front-end-school
-잔디심기 repository
+이스트소프트 프론트엔드
