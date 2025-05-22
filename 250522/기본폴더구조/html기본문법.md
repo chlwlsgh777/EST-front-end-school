@@ -24,8 +24,7 @@
 
 ## 부모요소
 
-<pre>
-<code>
+```
 <html>
 
   <head></head>
@@ -43,5 +42,4 @@
     </section>
   </body>
 </html>
-</code>
-</pre>
+```
