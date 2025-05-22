@@ -82,3 +82,9 @@
 - `<a>`태그는 하이퍼링크를 생성하는데 사용되는 기본 요소. href 속성을 통해 연결할 URL 지정하며 텍스트나 이미지 등 다양한 콘텐츠 링크로 만들 수 있음. 사용자가 클릭하면 웹페이지간 이동이 가능하게 함
 
 <strong>href 속성값 </strong>
+
+- 절대 URL 연결 : href="https://www.example.com"
+- 상대 URL 연결 : href="/about"
+- 같은 페이지의 특정 요소로 연결 : href="#section1"
+- tel: 클릭시 전화 앱이 열리도록 : href="tel:+8201012341234"
+- mailto: 클릭시 이메일 앱이 열리도록: href="mailto:example@example.com"
