@@ -1,0 +1,180 @@
+body {
+  font-family: "Segoe UI", "맑은 고딕", Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 40px;
+  color: #222;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+}
+
+hr {
+  margin: 16px 0 24px 0;
+  border: none;
+  border-top: 2px solid #4f8cff;
+  width: 100%;
+}
+
+.Introduce,
+.favorite {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 24px 32px;
+  margin: 0 auto 24px auto;
+  width: 600px;
+}
+
+.Introduce h2,
+.favorite h2 {
+  color: #4f8cff;
+  margin-bottom: 10px;
+}
+
+.favorite p {
+  margin: 0;
+}
+
+.favorite li {
+  margin-bottom: 6px;
+  font-size: 1.08em;
+  list-style: disc inside;
+}
+
+table {
+  border-collapse: collapse;
+  width: 720px;
+  margin: 36px auto 0 auto;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+caption {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 16px 0 8px 0;
+  color: #333;
+  background: #e9ecef;
+}
+
+thead th {
+  background: #4f8cff;
+  color: #fff;
+  padding: 12px 8px;
+  font-size: 1.1em;
+  border-bottom: 2px solid #3776d8;
+  text-align: center;
+}
+
+tbody td {
+  padding: 10px 8px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+.rank {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* 순위별 색상 */
+.rank1 {
+  color: #ff3b3b !important;
+  font-size: 1.2em;
+}
+.rank2 {
+  color: #ff9800 !important;
+}
+.rank3 {
+  color: #4caf50 !important;
+}
+.rankout {
+  color: #888 !important;
+}
+
+.rankChange {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.98em;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+.ranking-static-img {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 2px;
+  vertical-align: middle;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* 상승 아이콘 (빨간 위쪽 화살표) */
+.ranking-static-up {
+  background-image: url('data:image/svg+xml;utf8,<svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><polygon points="7,2 12,12 2,12" fill="%23e53935"/></svg>');
+}
+
+/* 하락 아이콘 (파란 아래쪽 화살표) */
+.ranking-static-down {
+  background-image: url('data:image/svg+xml;utf8,<svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><polygon points="2,2 12,2 7,12" fill="%234f8cff"/></svg>');
+}
+
+/* 유지 아이콘 (회색 대시) */
+.ranking-static-same {
+  background-image: url('data:image/svg+xml;utf8,<svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="6" width="8" height="2" fill="%23999"/></svg>');
+  margin-right: 2px;
+}
+
+tbody tr:hover {
+  background: #f1f7ff;
+}
+
+th.name {
+  text-align: center;
+  padding-left: 16px;
+}
+
+img[alt] {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid #e0e0e0;
+}
+
+footer.contact {
+  margin: 48px auto 0 auto;
+  text-align: center;
+  font-size: 1.1em;
+  color: #555;
+}
+
+footer.contact a {
+  color: #4f8cff;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.2s;
+}
+
+footer.contact a:hover {
+  color: #003d99;
+  text-decoration: underline;
+}
+
+img.Mypic {
+  display: block;
+  margin: 0 auto 24px auto;
+  width: 200px;
+  height: 275px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

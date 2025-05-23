@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me</title>
     <style>
-      img {
-        height: 200px;
-      }
     </style>
   </head>
+  <link rel="stylesheet" href="./table_practice.css" />
   <body>
     <h1>About Me</h1>
     <hr />
-    <img src="./파란배경.jpg" alt="" />
+    <img class="Mypic" src="./파란배경.jpg" alt="" />
     <div class="Introduce">
       <h2>자기소개</h2>
       <p>
@@ -32,6 +30,111 @@
         <li>골프</li>
       </p>
     </div>
+    <table>
+      <caption>
+        요즘 유행하는 온라인게임 순위
+      </caption>
+      <thead>
+        <tr>
+          <th>순위</th>
+          <th></th>
+          <th class="name">게임명</th>
+          <th>비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="rank rank1">1</span>
+            <span class="rankChange">
+              <span class="ranking-static-img ranking-static-same"></span>0
+            </span>
+          </td>
+          <td>
+            <img
+              src="https://cdn.gamemeca.com/gmdb/g000/26/18/221151(3).jpg"
+              alt="리그 오브 레전드"
+              width="40"
+              height="40"
+            />
+          </td>
+          <td>리그 오브 레전드</td>
+          <td>라이엇 게임즈</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="rank rank2">2</span>
+            <span class="rankChange">
+              <span class="ranking-static-img ranking-static-down"></span>1
+            </span>
+          </td>
+          <td>
+            <img
+              src="https://cdn.gamemeca.com/gmdb/g000/96/37/692068_221151.jpg"
+              alt="FC 온라인"
+              width="40"
+              height="40"
+            />
+          </td>
+          <td>FC 온라인</td>
+          <td>EA 코리아</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="rank rank3">3</span>
+            <span class="rankChange">
+              <span class="ranking-static-img ranking-static-up"></span>2
+            </span>
+          </td>
+          <td>
+            <img
+              src="https://cdn.gamemeca.com/gmdb/g001/17/93/538821_200302-risell-uu5.jpg"
+              alt="발로란트"
+              width="40"
+              height="40"
+            />
+          </td>
+          <td>발로란트</td>
+          <td>라이엇 게임즈</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="rank rankout">4</span>
+            <span class="rankChange">
+              <span class="ranking-static-img ranking-static-down"></span>1
+            </span>
+          </td>
+          <td>
+            <img
+              src="https://cdn.gamemeca.com/gmdb/g000/88/08/221151.jpg"
+              alt="배틀그라운드"
+              width="40"
+              height="40"
+            />
+          </td>
+          <td>배틀그라운드</td>
+          <td>크래프톤</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="rank rankout">5</span>
+            <span class="rankChange">
+              <span class="ranking-static-img ranking-static-up"></span>1
+            </span>
+          </td>
+          <td>
+            <img
+              src="https://cdn.gamemeca.com/gmdb/g000/15/23/221151(1).jpg"
+              alt="던전앤파이터"
+              width="40"
+              height="40"
+            />
+          </td>
+          <td>던전앤파이터</td>
+          <td>네오플</td>
+        </tr>
+      </tbody>
+    </table>
     <footer class="contact">
       <a href="tel:+82010-1234-1234">전화하기
       </a>
