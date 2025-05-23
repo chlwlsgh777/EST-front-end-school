@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>블록 레벨 요소 vs 인라인 레벨 요소</title>
+    <style>
+      div {
+        background-color: antiquewhite;
+      }
+      span {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>This is div</p>
+    </div>
+    <p>
+      이건
+      <span>span</span> 태그입니다.
+    </p>
+    <p>
+      이런식으로
+      <span>사용</span> 합니다.
+    </p>
+
+    <!-- O -->
+    <div>
+      블록요소 안
+      <span>인라인요소 중첩 가능</span>
+    </div>
+
+    <!-- X -->
+    <span>
+      인라인요소 안
+      <div>블록요소 중첩 불가능</div>
+    </span>
+  </body>
+</html>
