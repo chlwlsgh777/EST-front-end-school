@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다양한 html 태그들</title>
+  </head>
+  <body>
+    <p>
+      디스크 사용량:
+      <!-- 내부콘텐츠는 접근성을 위해 작성 -->
+      <meter value="70" min="0" max="100">70%</meter>
+    </p>
+    <p>
+      <!-- 
+        빨강 : min <= optimum < low
+        노랑 : low <= optimum <= high
+        초록 : high < optimum <= max
+          -->
+      휴대폰 베터리:
+      <meter value="19" min="0" max="100" low="20" high="80" optimum="100">
+        80%
+      </meter>
+    </p>
+    <label for="file">File Upload Progress:</label>
+    <progress id="file" value="50" max="100">50%</progress>
+    <p>데이터 로드 중... <progress></progress></p>
+
+    <h2>진행 상황</h2>
+    <progress id="progressBar" value="0" max="100"></progress>
+    <p id="progressText">0%</p>
+    <button onclick="incrementProgress()">진행</button>
+
+    <button id="showDialogBtn">모달 열기</button>
+    <dialog id="myDialog">
+      <p>Nice to meet you!</p>
+      <button id="closeBtn">Close</button>
+    </dialog>
+
+    <script>
+      const dialog = document.getElementById("myDialog");
+      const showDialogBtn = document.getElementById("showDialogBtn");
+      const closeBtn = document.getElementById("closeBtn");
+
+      showDialogBtn.addEventListener("click", () => {
+        dialog.showModal();
+        console.log("Best FE");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        dialog.close();
+      });
+
+      function incrementProgress() {
+        var progressBar = document.getElementById("progressBar");
+        var progressText = document.getElementById("progressText");
+
+        if (progressBar.value < 100) {
+          progressBar.value += 10;
+          progressText.textContent = progressBar.value + "%";
+        }
+
+        if (progressBar.value >= 100) {
+          alert("완료!");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+  </head>
+  <body>
+    <!-- 팀코드 회원가입중 연락처와 사용 브라우저 코드 -->
+    <label for="contact">연락처</label>
+    <!-- number 타입을 사용해도 되지만 tel로 쓰는게 더 명확 
+     휴대폰에서는 숫자패드만 나오기때문에 placeholder에 -를 제외하고 써달라고 명시-->
+    <input
+      type="tel"
+      id="contact"
+      name="contact"
+      placeholder="-을 제외하고 써주세요."
+    />
+    <br />
+    <label for="browser">사용하는 브라우저를 선택하세요.</label>
+    <input
+      list="browsers"
+      id="browser"
+      name="browser"
+      placeholder="선택해주세요."
+    />
+    <datalist id="browsers">
+      <option value="">선택해주세요.</option>
+      <option value="크롬"></option>
+      <option value="엣지"></option>
+      <option value="파이어폭스"></option>
+      <option value="사파리"></option>
+    </datalist>
+  </body>
+</html>
