@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <style>
+      /* 방문하지않은 링크 선택 */
+      a:link {
+        color: red;
+        background-color: skyblue;
+      }
+      /* 방문한 링크 선택 */
+      a:visited {
+        color: gray;
+        background-color: white;
+      }
+      /* 마우스 포인터가 올라간 상태의 요소 선택 */
+      p:hover {
+        background-color: palevioletred;
+      }
+      /* 마우스로 클릭하고 있는 상태의 요소 선택 */
+      p:active {
+        border: solid 5px black;
+      }
+      a:focus {
+        background-color: aqua;
+      }
+      li:first-child {
+        color: red;
+      }
+      li:last-child {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://paullab.co.kr/about.html" class="unvisited"
+      >방문하지 않은 링크</a
+    >
+    <a href="https://www.studyin.co.kr/" class="visited">방문한 링크</a>
+    <p>마우스를 올려보세요</p>
+
+    <ul>
+      <li>첫 번째 항목</li>
+      <li>중간 항목</li>
+      <li>마지막 항목</li>
+    </ul>
+  </body>
+</html>

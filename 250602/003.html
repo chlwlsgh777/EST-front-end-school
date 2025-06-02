@@ -4,7 +4,67 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>document</title>
+    <style>
+      * {
+        color: red;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      /* 타입 선택자, html 파일 내에 있는 모든 동일한 태그를 선택 */
+      h1 {
+        color: blue;
+      }
+
+      /* id 선택자, id 속성값은 html 페이지 내에서 유일해야함 */
+      #one {
+        color: green;
+      }
+
+      /* class 선택자, 하나의 요소에 여러 클래스 가능, 클래스 선택자 여러번 사용 가능 > 재사용성이 높음 */
+      .yellow {
+        color: yellow;
+      }
+      .blue {
+        background-color: blue;
+      }
+      /* 클래스명, 아이디명 작성 규칙 */
+      /* 1. 숫자로 시작 불가능 */
+      /* 2. 하이픈, 언더바, 문자로만 시작 가능 */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        border: solid 5px skyblue;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <a href="#one">one으로 이동</a>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h2>hello world</h2>
+    <h3 class="yellow blue">hello world</h3>
+    <h3 class="yellow blue">hello world</h3>
+    <h3 class="yellow blue">hello world</h3>
+    <h3 class="yellow blue">hello world</h3>
+    <h3 class="yellow blue">hello world</h3>
+    <h3 class="yellow blue">hello world</h3>
+    <h3 class="yellow blue">hello world</h3>
+    <h4 class="blue">hello world</h4>
+    <h5 class="yellow">hello world</h5>
+    <h6>hello world</h6>
+    <p id="one">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+      assumenda, quis atque quidem sapiente in repellendus a ducimus non
+      officiis cumque voluptatem id minus sint voluptas nihil dolore modi
+      deserunt.
+    </p>
+  </body>
 </html>
