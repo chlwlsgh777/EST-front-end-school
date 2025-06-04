@@ -91,4 +91,59 @@ h1 {
 - `::placeholder`
 
 9. 고급 포커스 선택자
-   - `:focus-visible` focus와 유사하지만 focus는 포
+
+   - `:focus-visible` focus와 유사하지만 focus는 포커스된 요소에 항상 적용 되지만 visible은 좀 더 선택적으로 작동
+     주로 키보드 사용하여 페이지 탐색하거나 스크립트 통해 포커스가 관리될 떄 활성화, 마우스나 터치는 활성화x
+   - `focus-within` 요소 또는 그 자식 요소가 포커스 받았을 떄 적용
+   - `:enabled`,`:disabled`활성화, 비활성화 상태 폼 요소 선택
+   - `checked` 체크 상태의 라디오 버튼이나 체크박스
+   - `:root` 문서 트리의 루트 요소 선택. HTML에서는 <html>요소를 가리킴. 이는 전역 CSS변수를 선언할 떄 주로 선언
+     CSS변수는 `--`로 시작하는 이름을 가지며 `var()` 함수를 사용하여 값을 참조
+
+     ```
+     :root {
+     --main-color: hotpink;
+     --pane-padding: 5px 42px;
+     }
+
+
+     p {
+     color: var(--main-color);
+     padding: var(--pane-padding);
+     border: 1px solid black;
+     }
+
+     ```
+
+     - 테마전환
+
+     ```
+     :root {
+       /* 라이트 모드 (기본) */
+       --background-color: #ffffff;
+       --text-color: #333333;
+       --accent-color: #0066cc;
+     }
+
+     [data-theme='dark'] {
+       /* 다크 모드 */
+       --background-color: #222222;
+       --text-color: #f0f0f0;
+       --accent-color: #4d9fff;
+     }
+
+     body {
+       background-color: var(--background-color);
+       color: var(--text-color);
+     }
+
+     a {
+       color: var(--accent-color);
+     }
+     ```
+
+   - `:is()` and `:where` - 여러개의 선택자를 한번에 지정할 수 있는 간편한 방법. `:is()`는 여러개의 선택자를 지정할 떄 사용하며 `:where()`은 `:is()`와 유사하지만 우선순위가 낮음
+
+   - `:where()` 제일 큰 장점은 우선순위가 0. 스타일 재정의 필요할 때 유용. 가장 낮은 우선순위
+
+   - `:has()`특정 요소가 자식 요소를 포함하고 있는지를 검사할 수있게 해주며, CSS선택자의 강력한 기능 제공
