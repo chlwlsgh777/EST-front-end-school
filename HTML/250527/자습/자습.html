@@ -5,6 +5,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>당신 근처의 지역 생활 커뮤니티</title>
+    <style>
+      html {
+        font-size: 10px;
+      }
+      .sr-only {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+      }
+      .headlogo {
+        height: 10px;
+      }
+      .headnav {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        border: 5px orange solid;
+        gap: 10px;
+      }
+      .headnav a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 1rem;
+        padding: 0 4px;
+        position: relative;
+      }
+      /* 로고 a 태그에는 | 구분자 제외 */
+      .headnav a:not(:first-of-type):not(:last-of-type)::after {
+        content: "|";
+        margin-left: 10px;
+        color: #ccc;
+        font-size: 1.2rem;
+      }
+      /* 중고차 직거래 뒤에는 구분자 붙이지 않음 */
+      .headnav a:last-of-type::after {
+        content: "";
+      }
+      .search-area {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+      }
+      .search-area input[type="text"] {
+        padding: 6px 10px;
+        margin-right: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .search-btn {
+        padding: 6px 12px;
+        font-size: 1rem;
+        background: #fff;
+        color: #000;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      main section {
+        margin: 30px 0;
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .town-container {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+      }
+      .town-container div {
+        flex: 1;
+        text-align: center;
+        background: #fafafa;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+      }
+      .town-container img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+      }
+      footer {
+        background: #f5f5f5;
+        padding: 30px 0 10px 0;
+        font-size: 1rem;
+      }
+      .footer-menu {
+        display: flex;
+        gap: 50px;
+        margin-bottom: 20px;
+        justify-content: center;
+      }
+      .footer-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-menu li {
+        margin-bottom: 8px;
+      }
+      footer address {
+        font-style: normal;
+        color: #888;
+        margin-top: 20px;
+        text-align: left;
+        font-size: 0.7rem;
+        line-height: 1.7;
+      }
+      footer > div {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      footer a {
+        margin: 0 5px;
+        color: #ff8a3d;
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
     <h1 class="sr-only">당신의 근처 당근</h1>
@@ -19,20 +142,20 @@
           <a href="#">알바</a>
           <a href="#">부동산</a>
           <a href="#">중고차 직거래</a>
+          <form
+            class="search-area search-form"
+            role="search"
+            aria-label="물품이나 동네 검색"
+          >
+            <label for="search" class="sr-only">검색</label>
+            <input
+              type="text"
+              id="search"
+              placeholder="물품이나 동네를 검색해보세요"
+            />
+            <button type="submit" class="search-btn">검색</button>
+          </form>
         </nav>
-        <form
-          class="search-area search-form"
-          role="search"
-          aria-label="물품이나 동네 검색"
-        >
-          <label for="search" class="sr-only">검색</label>
-          <input
-            type="text"
-            id="search"
-            placeholder="물품이나 동네를 검색해보세요"
-          />
-          <button type="submit" class="search-btn">검색</button>
-        </form>
       </div>
     </header>
     <main>

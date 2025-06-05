@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* div {
+        width: 100vw;
+        height: 50vh;
+        background: #833ab4;
+        background-image: url(./images/images/image.png),
+          linear-gradient(
+            90deg,
+            rgba(131, 58, 180, 1) 0%,
+            rgba(253, 29, 29, 1) 50%,
+            rgba(252, 176, 69, 1) 100%
+          );
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 10px;
+      } */
+      .normal {
+        width: 88px;
+        height: 32px;
+        color: #cbd5df;
+        background: #343f50;
+
+        border: 1px solid #1a202c;
+        box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.1);
+      }
+
+      .normal:hover {
+        width: 88px;
+        height: 32px;
+        text-decoration: underline;
+        background: #343f50;
+        border: 1px solid #1a202c;
+        box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.2);
+      }
+      .normal:active {
+        width: 88px;
+        height: 32px;
+        background: #343f50;
+        border: 1px solid #1a202c;
+        box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.2);
+      }
+      .normal:disabled {
+        width: 88px;
+        height: 32px;
+        color: #4a5568;
+        background: #343f50;
+        border: 1px solid #1a202c;
+      }
+      .positive {
+        width: 88px;
+        height: 32px;
+        color: #439aff;
+        background-color: #343f50;
+        border: 1px solid #1a202c;
+      }
+      .positive:hover {
+        width: 88px;
+        height: 32px;
+        color: #fff;
+        text-decoration: underline;
+        background: #439aff;
+        box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.2);
+        border: 1px solid #439aff;
+      }
+      .positive.active {
+        width: 88px;
+        height: 32px;
+        color: #fff;
+        text-decoration: underline;
+        border: 1px solid #439aff;
+        box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <button class="normal">Button</button>
+    <button class="positive">Yes</button>
+    <button class="negative">Del</button>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 1000px;
+        height: 1200px;
+        border: solid 5px black;
+
+        background-image: url("./images/images/bg.png");
+        background-repeat: no-repeat;
+
+        /* 배경이미지 크기 조절 */
+        /* 여백 발생 가능성 0, 이미지 비율 유지, 이미지 잘리지 않음 */
+        background-size: contain;
+        /* 여백 발생 가능성x, 이미지 비율 유지, 이미지 잘림 가능성 o */
+        background-size: cover;
+        background-size: 500px 700px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div></div>
+  </body>
+</html>
