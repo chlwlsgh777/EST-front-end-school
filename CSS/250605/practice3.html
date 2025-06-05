@@ -51,6 +51,7 @@
         color: #4a5568;
         background: #343f50;
         border: 1px solid #1a202c;
+        pointer-events: none;
       }
       .positive {
         width: 88px;
@@ -58,6 +59,7 @@
         color: #439aff;
         background-color: #343f50;
         border: 1px solid #1a202c;
+        box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.1);
       }
       .positive:hover {
         width: 88px;
@@ -68,7 +70,7 @@
         box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.2);
         border: 1px solid #439aff;
       }
-      .positive.active {
+      .positive:active {
         width: 88px;
         height: 32px;
         color: #fff;
@@ -76,12 +78,62 @@
         border: 1px solid #439aff;
         box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.2);
       }
+      .negative{
+        width: 88px;
+        height: 32px;
+        color: #EB5757;
+        background-color: #343f50;
+        border: 1px solid #1a202c;
+        box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.1);
+      }
+        .negative:hover{
+          width: 88px;
+          height: 32px;
+          text-decoration: underline;
+          color: #fff;
+          background-color: #EB5757;
+          border: solid 1px #EB5757;
+          box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.2);
+        }
+      .negative:active{
+        width: 88px;
+        height: 32px;
+        text-decoration: underline;
+        color: #fff;
+        background-color: #EB5757;
+        border: #EB5757 solid 1px;
+        box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.2);
+      }
+      .hello1{
+        width: 100px;
+        height: 50px;
+        color: white;
+        background-color: #47484b;
+        border: 5px solid black;
+        margin:5px ;
+        box-shadow: inset 5px 5px 0 rgba(255, 255, 255, 0.1);
+
+      }
+      .hello2{
+        width: 100px;
+        height: 50px;
+        color: white;
+        background: linear-gradient(90deg, rgba(127, 78, 246, 1) 0%, rgba(89, 93, 244, 1) 50%, rgba(51, 108, 242, 1) 100%);
+        border: 8px dashed #e6e6fa;
+        border-radius: 50%;
+        margin: 5px;
+        background-clip: padding-box;
+        display: block;
+        text-transform: capitalize;
+      }
     </style>
   </head>
   <body>
     <div></div>
     <button class="normal">Button</button>
+    <button class="normal" disabled>Disabled</button>
     <button class="positive">Yes</button>
     <button class="negative">Del</button>
+
   </body>
 </html>
