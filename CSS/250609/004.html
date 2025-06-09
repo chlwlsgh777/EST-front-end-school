@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .relative {
+            background-color: lightcoral;
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+        .normal {
+            background-color: lightcyan;
+        }
+        .absolute {
+            background-color: lightpink;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .fixed{
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background-color: limegreen;
+            border-radius: 50%;
+            bottom: 20px;
+        right: 20px;
+        }
+        .container {
+  height: 400px;
+  overflow-y: scroll;
+  border: 2px solid black;
+  padding: 10px;
+}
+ 
+.spacer {
+  height: 100px;
+}
+ 
+.sticky-box {
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 10px;
+  margin: 10px 0;
+}
+ 
+.content {
+  height: 600px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+    </style>
+</head>
+<body>
+    <div class="relative">relative
+        <div class="absolute">absolute</div>
+    </div>
+    <div class="normal">normal flow</div>
+    <div class="fixed">fixed</div>
+    <div class="container">
+  <p>아래로 스크롤하세요.</p>
+  <div class="spacer"></div>
+  <div class="sticky-box">이 요소는 sticky입니다.</div>
+  <div class="content">
+    <p>이 콘텐츠를 지나 스크롤하면 sticky 요소가 상단에 고정됩니다.</p>
+    <p>계속 스크롤 해보세요.</p>
+  </div>
+</div>
+</body>
+</html>
