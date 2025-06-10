@@ -1,0 +1,76 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+body {
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  background: #fff;
+  font-size: 12px;
+}
+
+.login-area {
+  border: 1.5px solid rgba(219, 219, 219, 1);
+  border-radius: 5px;
+  width: 420px;
+  margin: 60px auto;
+  padding: 16px 18px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.header p {
+  font-size: 12px;
+  color: #222;
+  font-weight: 400;
+}
+
+.login-btn {
+  width: 100%;
+  height: 56px;
+  background: rgba(113, 27, 255, 1);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.login-btn img {
+  width: 90px;
+  height: 24px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: rgba(118, 118, 118, 1);
+  width: 100%;
+}
+
+.find,
+.regist {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.find {
+  margin-right: 120px;
+}
+
+.bottom a {
+  color: rgba(118, 118, 118, 1);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.bottom img {
+  width: 20px;
+  height: 20px;
+}
