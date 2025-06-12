@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes walk {
+        to {
+          background-position: right 0;
+        }
+      }
+
+      @keyframes cafe {
+        to {
+          background-position: right 0;
+        }
+      }
+
+      .licat {
+        background-image: url(./licat.png);
+        width: 168px;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: auto 100%;
+        animation: walk 0.8s infinite steps(6);
+      }
+
+      .building {
+        background-image: url(./building1.png);
+        width: 113px;
+        height: 176px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: auto 100%;
+        animation: cafe 3s infinite steps(33);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="licat"></div>
+    <div class="building"></div>
+  </body>
+</html>

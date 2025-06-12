@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes move-box {
+        0% {
+          transform: translate(0, 0);
+          background-color: red;
+        }
+
+        100% {
+          transform: translate(300px, 0);
+          background-color: lime;
+        }
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: purple;
+        animation-name: move-box;
+        animation-duration: 3s;
+        animation-delay: 1s;
+        /* animation-timing-function: linear; */
+        /* animation-timing-function: cubic-bezier(0.71, -0.33, 0.58, 1); */
+        /* animation-timing-function: steps(6); */
+        /* animation-delay: -2s; */
+        /* animation-iteration-count: 2; */
+
+        /* animation-direction: reverse;
+        animation-direction: alternate;
+        animation-direction: alternate-reverse; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

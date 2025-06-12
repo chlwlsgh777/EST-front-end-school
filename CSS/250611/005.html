@@ -6,10 +6,11 @@
     <title>Document</title>
     <style>
       .container {
-        height: 100vh;
-        background-color: #eee;
+        width: 600px;
+        height: 600px;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
+
         grid-template-areas:
           "header header header header header"
           "section1 section1 section1 section1 aside"
@@ -24,45 +25,39 @@
       }
 
       .item2 {
-        background-color: lime;
+        background-color: rgb(231, 240, 128);
         grid-area: section1;
       }
+
       .item3 {
-        background-color: lightcyan;
-        grid-area: section1;
+        background-color: rgb(186, 240, 128);
+        grid-area: section2;
       }
+
       .item4 {
-        background-color: lightgrey;
-        grid-area: section2;
-      }
-      .item5 {
-        background-color: lightpink;
-        grid-area: section2;
-      }
-      .item6 {
-        background-color: violet;
+        background-color: rgb(128, 236, 240);
         grid-area: section3;
       }
-      .item7 {
-        background-color: blue;
+
+      .item5 {
+        background-color: rgb(148, 128, 240);
         grid-area: aside;
       }
-      .item8 {
-        background-color: lemonchiffon;
+
+      .item6 {
+        background-color: rgb(240, 128, 238);
         grid-area: footer;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="item1">1</div>
-      <div class="item2">2</div>
-      <div class="item3">3</div>
-      <div class="item4">4</div>
-      <div class="item5">5</div>
-      <div class="item6">6</div>
-      <div class="item7">7</div>
-      <div class="item8">8</div>
+      <div class="item1">item1</div>
+      <div class="item2">item2</div>
+      <div class="item3">item3</div>
+      <div class="item4">item4</div>
+      <div class="item5">item5</div>
+      <div class="item6">item6</div>
     </div>
   </body>
 </html>

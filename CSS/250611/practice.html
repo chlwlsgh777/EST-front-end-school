@@ -3,53 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>flex layout</title>
     <style>
-      /* grid */
+      .main {
+        background-color: #000;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      header,
+      footer {
+        height: 100px;
+      }
+
       .container {
-        display: grid;
-        background-color: lightcoral;
-        grid-template-areas:
-          "header header"
-          "section aside"
-          "footer footer";
-        grid-template-rows: auto 1fr auto;
-        grid-template-columns: 1fr 100px;
-        border: 5px solid black;
+        height: 500px;
+        display: flex;
+        gap: 10px;
       }
 
-      .header,
-      .section,
-      .aside,
-      .footer {
-        text-align: center;
-        align-content: center;
+      aside {
+        width: 200px;
       }
 
-      .header {
-        grid-area: header;
-        border-bottom: 5px solid black;
+      section {
+        flex-grow: 1;
       }
-      .section {
-        grid-area: section;
-        border-bottom: 5px solid black;
-        border-right: 5px solid black;
-      }
-      .aside {
-        grid-area: aside;
-        border-bottom: 5px solid black;
-      }
-      .footer {
-        grid-area: footer;
+
+      header,
+      section,
+      aside,
+      footer {
+        background-color: lemonchiffon;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="header">header</div>
-      <div class="section">section</div>
-      <div class="aside">aside</div>
-      <div class="footer">footer</div>
+    <div class="main">
+      <header>header</header>
+      <div class="container">
+        <section>section</section>
+        <aside>aside</aside>
+      </div>
+      <footer>footer</footer>
     </div>
   </body>
 </html>
