@@ -4,23 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Em변환기</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Em 변환기</h1>
-    <form>
-      <p>기본 폰트(px)</p>
-      <input
-        type="text"
-        id="defaultFont"
-        placeholder="기본 폰트를 입력하세요."
-      />
+    <main>
+      <div class="bg-img">
+        <div class="calculator">
+          <h1>Em 변환기</h1>
+          <form>
+            <p>기본 폰트(px)</p>
+            <input
+              type="text"
+              id="defaultFont"
+              placeholder="기본 폰트를 입력하세요."
+            />
 
-      <p>원하는 px값</p>
-      <input type="text" id="targetPx" placeholder="변환할 px를 입력하세요" />
-
-      <button type="button" onclick="em()">Em으로 변환하기</button>
-    </form>
-    <p id="result"></p>
+            <p>원하는 px값</p>
+            <input
+              type="text"
+              id="targetPx"
+              placeholder="변환할 px를 입력하세요"
+            />
+            <div class="btn">
+              <button type="button" onclick="em()">Em으로 변환하기</button>
+            </div>
+          </form>
+          <p id="result"></p>
+        </div>
+      </div>
+    </main>
     <script>
       //   console.log(baseFont);
       function em() {
@@ -30,7 +42,7 @@
 
         const translateEm = toEm / baseFont;
         // console.log(translateEm);
-        resultOutput.textContent = `${translateEm}em`;
+        resultOutput.textContent = `${baseFont}px -> ${translateEm}em`;
       }
     </script>
   </body>
