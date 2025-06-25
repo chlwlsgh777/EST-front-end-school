@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz 20</title>
+  </head>
+  <body>
+    <input type="text" id="userName" placeholder="이름을 입력하세요." />
+
+    <p id="output"></p>
+    <script>
+      const userName = document.getElementById("userName");
+      const output = document.getElementById("output");
+
+      userName.addEventListener("input", out);
+
+      function out() {
+        output.textContent = `환영합니다. ${userName.value}님!`;
+      }
+    </script>
+  </body>
+</html>

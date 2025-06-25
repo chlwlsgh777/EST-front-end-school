@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz 17</title>
+  </head>
+  <body>
+    <input type="text" id="variable1" />
+    <input type="text" id="variable2" />
+
+    <p id="result"></p>
+    <script>
+      const input1 = document.getElementById("variable1");
+      const input2 = document.getElementById("variable2");
+
+      input1.addEventListener("input", cal);
+      input2.addEventListener("input", cal);
+
+      function cal() {
+        const num1 = Number(input1.value);
+        const num2 = Number(input2.value);
+        result.textContent = `결과 : ${num1 * num2}`;
+      }
+    </script>
+  </body>
+</html>
