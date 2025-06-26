@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>addEventListner</title>
+  </head>
+  <body>
+    <h1>Click Button</h1>
+
+    <input type="color" id="userColor" />
+    <input type="text" id="input" />
+    <button type="button" id="btn">클릭</button>
+
+    <p id="result"></p>
+
+    <script>
+      //   버튼을 클릭하면 printValue()를 실행
+      //   '버튼', '이벤트 : 클릭' , printValue호출
+      const btn = document.getElementById("btn");
+      const result = document.getElementById("result");
+      const input = document.getElementById("input");
+      const color = document.getElementById("userColor");
+
+      btn.addEventListener("click", function (e) {
+        console.log(e.target);
+        console.log(e.currentTarget);
+        result.textContent = input.value;
+      });
+
+      input.addEventListener("input", function (e) {
+        result.textContent = e.target.value;
+      });
+
+      color.addEventListener("input", function (e) {
+        document.body.style.backgroundColor = e.target.value;
+      });
+    </script>
+  </body>
+</html>

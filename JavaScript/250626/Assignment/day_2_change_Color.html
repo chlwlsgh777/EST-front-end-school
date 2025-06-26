@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: blueviolet;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .container {
+        padding: 50px;
+        width: 100vw;
+        border-radius: 15px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>문서의 배경색 바꾸기</h1>
+      <select name="documnet-color" id="color">
+        <option value="white">White</option>
+        <option value="aqua">Aqua</option>
+        <option value="black">Black</option>
+        <option value="pink">Pink</option>
+        <option value="lightCoral">LightCoral</option>
+        <option value="lightGreen">LightGreen</option>
+        <option value="blueviolet">Blueviolet</option>
+      </select>
+    </div>
+    <script>
+      const select = document.getElementById("color");
+
+      select.addEventListener("change", function (e) {
+        const selectColor = e.target.value;
+        console.log(selectColor);
+
+        document.body.style.backgroundColor = selectColor;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가위바위보</title>
+  </head>
+  <body>
+    <h1>가위바위보</h1>
+    <button type="button" onclick="playGame('바위')">바위</button>
+    <button type="button" onclick="playGame('가위')">가위</button>
+    <button type="button" onclick="playGame('보')">보</button>
+
+    <p id="result"></p>
+
+    <div id="score"></div>
+
+    <script>
+      const choices = ["바위", "가위", "보"];
+      const score = document.getElementById("score");
+
+      let win = 0;
+      let lose = 0;
+      let draw = 0;
+
+      function playGame(userChoice) {
+        const aiChoice = choices[Math.floor(Math.random() * 3)];
+        const result = document.getElementById("result");
+        console.log(aiChoice);
+        let message = "";
+
+        const userWin =
+          (userChoice === "바위" && aiChoice === "가위") ||
+          (userChoice === "가위" && aiChoice === "보") ||
+          (userChoice === "보" && aiChoice === "바위");
+
+        if (aiChoice === userChoice) {
+          message = "비겼습니다.";
+          draw++;
+        } else if (userWin) {
+          message = "이겼습니다.";
+          win++;
+        } else {
+          message = "졌습니다.";
+          lose++;
+        }
+
+        result.textContent = `${message}`;
+        score.textContent = `승:${win} / 패:${lose} / 무:${draw}`;
+      }
+    </script>
+  </body>
+</html>
