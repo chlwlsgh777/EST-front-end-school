@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
       body {
-        background-color: blueviolet;
+        /* background-color: blueviolet; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -23,25 +23,46 @@
   </head>
   <body>
     <div class="container">
-      <h1>문서의 배경색 바꾸기</h1>
-      <select name="documnet-color" id="color">
+      <label for="color">문서의 배경색 바꾸기</label>
+      <select name="document-color" id="color">
         <option value="white">White</option>
         <option value="aqua">Aqua</option>
         <option value="black">Black</option>
         <option value="pink">Pink</option>
-        <option value="lightCoral">LightCoral</option>
-        <option value="lightGreen">LightGreen</option>
+        <option value="lightcoral">LightCoral</option>
+        <option value="lightgreen">LightGreen</option>
         <option value="blueviolet">Blueviolet</option>
       </select>
     </div>
     <script>
       const select = document.getElementById("color");
+      // 이걸 추가하고 옵션 태그에 select 추가하면 해당 옵션으로 배경색이 지정
+      // document.body.style.backgroundColor = select.value;
+
+      //랜덤 배경색 뽑기
+      const colors = [
+        "white",
+        "aqua",
+        "black",
+        "pink",
+        "lightcoral",
+        "lightgreen",
+        "blueviolet",
+      ];
+      const randombg = Math.floor(Math.random() * colors.length);
+      document.body.style.backgroundColor = colors[randombg];
+      document.getElementById("color").value = colors[randombg];
+
       select.addEventListener("change", function (e) {
         const selectColor = e.target.value;
         console.log(selectColor);
-
         document.body.style.backgroundColor = selectColor;
       });
+
+      // window.onload = function () {
+      //   document.body.style.backgroundColor = "lightcoral";
+      //   document.getElementById("color").value = "lightCoral";
+      // };
     </script>
   </body>
 </html>
