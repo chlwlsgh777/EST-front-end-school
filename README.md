@@ -10,4 +10,5 @@
 
 ## JAVASCRIPT
 
+nodemon 실행하기
 25/06/25 ~ ing
