@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Cafe 주문 계산기</title>
+  </head>
+  <body>
+    <form id="form">
+      <h1>My Cafe 주문 계산기</h1>
+
+      <label for="drink">음료선택</label>
+      <select id="drink">
+        <option value="">--음료를 선택하세요--</option>
+        <option value="americano">아메리카노 (￦2,500)</option>
+        <option value="cafeLatte">카페라떼 (￦3,000)</option>
+        <option value="cafeMocha">카페모카 (￦3,500)</option>
+        <option value="blackTea">홍차 (￦2,000)</option>
+        <option value="orangeJuice">오렌지주스 (￦2,800)</option>
+      </select>
+
+      <label for="size">사이즈 선택</label>
+      <select id="size">
+        <option value="">--사이즈를 선택하세요--</option>
+        <option value="small">스몰 (0)</option>
+        <option value="medium">미디움 (￦1,000)</option>
+        <option value="large">라지 (￦2,000)</option>
+      </select>
+
+      <label for="amount">수량</label>
+      <input type="number" id="amount" />
+
+      <button id="calculate" type="submit">계산하기</button>
+
+      <p id="result"></p>
+    </form>
+    <script>
+      const drink = {
+        americano: 2500,
+        cafeLatte: 3000,
+        cafeMocha: 3500,
+        blackTea: 2000,
+        orangeJuice: 2800,
+      };
+
+      const size = {
+        small: 0,
+        medium: 1000,
+        large: 2000,
+      };
+
+      const form = document.getElementById("form");
+      const drinkSelect = document.getElementById("drink");
+      const sizeSelect = document.getElementById("size");
+      const amountInput = document.getElementById("amount");
+      const result = document.getElementById("result");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const selectDrink = drinkSelect.value;
+        const selectSize = sizeSelect.value;
+        const amount = parseInt(amountInput.value);
+
+        const drinkPrice = drink[selectDrink];
+        const sizePrice = size[selectSize];
+        const totalPrice = (drinkPrice + sizePrice) * amount;
+
+        result.textContent = `총 결제 금액은 ￦${totalPrice.toLocaleString()} 입니다.`;
+      });
+    </script>
+  </body>
+</html>
