@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .show-img img {
+        width: 300px;
+      }
+      .container {
+        display: flex;
+      }
+      .img-btn img {
+        width: 100px;
+        border-radius: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="show-img">
+        <img src="./images/irangi_01.png" alt="어려워요?" class="img1" />
+      </div>
+      <div class="img-btn">
+        <button type="button" id="btn1">
+          <img src="./images/irangi_01.png" alt="어려워요?" />
+        </button>
+        <button type="button" id="btn2">
+          <img src="./images/irangi_02.png" alt="포기하지마요" />
+        </button>
+        <button type="button" id="btn3">
+          <img src="./images/irangi_03.png" alt="커피는 챙겨야지" />
+        </button>
+        <button type="button" id="btn4">
+          <img src="./images/irangi_04.png" alt="나 뿔나쪄" />
+        </button>
+        <button type="button" id="btn5">
+          <img src="./images/irangi_05.png" alt="별 모자 이랑이" />
+        </button>
+        <button type="button" id="btn6">
+          <img src="./images/irangi_06.png" alt="아뵤~오" />
+        </button>
+        <button type="button" id="btn7">
+          <img src="./images/irangi_07.png" alt="힘들어진다" />
+        </button>
+      </div>
+    </div>
+    <script>
+      // attribute 제어
+      const img1 = document.querySelector(".img1");
+      const buttons = document.querySelectorAll(".img-btn button");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const imgAlt = btn.querySelector("img").getAttribute("alt");
+          const imgSrc = btn.querySelector("img").getAttribute("src");
+
+          img1.setAttribute("src", imgSrc);
+          img1.setAttribute("alt", imgAlt);
+        });
+      });
+    </script>
+  </body>
+</html>
