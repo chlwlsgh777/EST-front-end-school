@@ -1,0 +1,25 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+header {
+    padding: 0 148px;
+    margin-bottom: -120px;
+}
+h1 img {
+    width: 9.25rem;
+    height: 2.5rem;
+}
+.lang-btn {
+    display: flex;
+    align-items: center;
+    border: solid 1px white;
+    background-color: white;
+}
+.lang-btn select {
+    border: 0;
+}
+
+main {
+    width: 100%;
+}
