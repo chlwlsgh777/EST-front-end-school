@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <title>로스트아크 캐릭터 + 보석 정보</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      max-width: 800px;
-      margin: 30px auto;
-    }
-    img {
-      vertical-align: middle;
-    }
-    .gem {
-      margin: 10px 0;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 10px;
-    }
-  </style>
-</head>
-<body>
-  <h1>로스트아크 캐릭터 검색</h1>
-  <form id="search-form">
-    <input type="text" id="character-name" placeholder="캐릭터 이름 입력" required />
-    <button type="submit">검색</button>
-  </form>
+  <head>
+    <meta charset="UTF-8" />
+    <title>로스트아크 캐릭터 + 보석 정보</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 800px;
+        margin: 30px auto;
+      }
+      img {
+        vertical-align: middle;
+      }
+      .gem {
+        margin: 10px 0;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>로스트아크 캐릭터 검색</h1>
+    <form id="search-form">
+      <input
+        type="text"
+        id="character-name"
+        placeholder="캐릭터 이름 입력"
+        required
+      />
+      <button type="submit">검색</button>
+    </form>
 
-  <hr />
+    <hr />
 
-  <div id="profile-result"></div>
-  <div id="gems-result"></div>
-  <script src = "./index.js">
-  </script>
-</body>
+    <div id="profile-result"></div>
+    <div id="gems-result"></div>
+    <div id="cards-result"></div>
+    <script src="./index.js"></script>
+  </body>
 </html>

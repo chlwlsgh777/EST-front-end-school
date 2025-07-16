@@ -1,10 +1,12 @@
-// const API_KEY = "";// 실제 api 넣기
+const API_KEY =
+  "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IktYMk40TkRDSTJ5NTA5NWpjTWk5TllqY2lyZyIsImtpZCI6IktYMk40TkRDSTJ5NTA5NWpjTWk5TllqY2lyZyJ9.eyJpc3MiOiJodHRwczovL2x1ZHkuZ2FtZS5vbnN0b3ZlLmNvbSIsImF1ZCI6Imh0dHBzOi8vbHVkeS5nYW1lLm9uc3RvdmUuY29tL3Jlc291cmNlcyIsImNsaWVudF9pZCI6IjEwMDAwMDAwMDAyMjYwMDkifQ.qYuq4X3XyGeLF9PSs69Ik4TfLMnLXshyV9JQZaXJXdscxASez8VTVWu3gqheC95e3DY5iAGCSaH-VdA9FUvgLe8mlIyI7Hledwd5rvgUa9fApfzLZl8ACdmK6nVfKM6ReMSBx8I_dFSevHN-P5dczXPOX__sxR7l75LSpTot3amr-NRRk5lbJn6M8Ol2fWdtZU0XbU76uO0EAJO2TneKSCuSLYboXvuDDCO_KYfDYcFexsJgph5E6UHqF6f348IkFknYgBWLjH412wW3gz47HChzt24kXaqpU_yV9y7nvsMJYk1HoUA79asBoGGpWb1uVLbqPudep-tVstQdHjMlMg";
 const BASE_URL = "https://developer-lostark.game.onstove.com";
 
 const $form = document.getElementById("search-form");
 const $input = document.getElementById("character-name");
 const $profileResult = document.getElementById("profile-result");
 const $gemsResult = document.getElementById("gems-result");
+const $cardsResult = document.getElementById("cards-result");
 
 $form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -67,3 +69,16 @@ $form.addEventListener("submit", async (e) => {
     $profileResult.innerHTML = `<p style="color:red;">❌ 에러: ${err.message}</p>`;
   }
 });
+
+// 3. 카드 정보 요청
+const cardsRes = await fetch(
+  `${BASE_URL}/armories/characters/${encodeURIComponent(name)}/cards`,
+  {
+    headers: { Authorization: `Bearer ${API_KEY}` },
+  }
+);
+if (!cardsRes.ok) throw new Error("카드 정보 요청 실패");
+const cardsData = await cardsRes.json();
+
+if (!cardsData.cards || cardsData.cards.length === 0) {
+}
