@@ -68,17 +68,29 @@ $form.addEventListener("submit", async (e) => {
     console.error(err);
     $profileResult.innerHTML = `<p style="color:red;">❌ 에러: ${err.message}</p>`;
   }
+  // 3. 카드 정보 요청
+  const cardsRes = await fetch(
+    `${BASE_URL}/armories/characters/${encodeURIComponent(name)}/cards`,
+    {
+      headers: { Authorization: `Bearer ${API_KEY}` },
+    }
+  );
+  if (!cardsRes.ok) throw new Error("카드 정보 요청 실패");
+  const cardsData = await cardsRes.json();
+  
+  if (!cardsData.cards || cardsData.cards.length === 0) {
+    $cardsResult.innerHTML = "<p>등록된 카드가 없습니다.</p>"
+  } else {
+     $cardsResult.innerHTML = "<h3>🃏 카드 정보</h3>";
+      cardsData.Cards.forEach((card) => {
+        const cardDiv = document.createElement("div");
+        cardDiv.classList.add("card");
+        cardDiv.innerHTML = `
+          <img src="${card.Icon}" alt="${card.Name}" width="40" />
+          <strong>${card.Name}</strong> (Lv.${card.Level})
+        `;
+        $cardsResult.appendChild(cardDiv);
+      });
+  }
 });
 
-// 3. 카드 정보 요청
-const cardsRes = await fetch(
-  `${BASE_URL}/armories/characters/${encodeURIComponent(name)}/cards`,
-  {
-    headers: { Authorization: `Bearer ${API_KEY}` },
-  }
-);
-if (!cardsRes.ok) throw new Error("카드 정보 요청 실패");
-const cardsData = await cardsRes.json();
-
-if (!cardsData.cards || cardsData.cards.length === 0) {
-}
