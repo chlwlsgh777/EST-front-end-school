@@ -1,0 +1,58 @@
+h2 {
+  word-break: break-word;
+}
+
+/* 내비게이션 링크 스타일 */
+nav {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #e9ecef;
+}
+
+/* 블로그 게시물 스타일 */
+.blog-post {
+  width: 500px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.blog-post .post-info {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+.blog-post img {
+  width: 500px;
+  height: 400px;
+}
