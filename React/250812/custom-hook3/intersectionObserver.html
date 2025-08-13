@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const option = {
+        root: null, // viewport
+        threshold: 0, // 0 ~ 1 사이의 값, 0은 요소가 화면에 보일 때, 1은 요소가 완전히 보일 때
+      };
+
+      const callback = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("요소가 화면에 보입니다.");
+          } else {
+            console.log("요소가 화면에서 벗어났습니다.");
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback, option);
+
+      // 관찰할 요소 지정
+      observer.observe(target);
+
+      // 관찰 중지
+      observer.unobserve(target);
+
+      // 관찰자 해제
+      observer.disconnect();
+    </script>
+  </body>
+</html>
