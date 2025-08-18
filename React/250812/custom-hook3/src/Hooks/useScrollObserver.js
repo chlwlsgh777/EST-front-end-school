@@ -16,5 +16,6 @@ export function useScrollObserver() {
         threshold: 1,
       })
     );
+    observer.observe(endLine);
   });
 }
