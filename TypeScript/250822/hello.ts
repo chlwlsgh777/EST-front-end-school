@@ -10,7 +10,7 @@ console.log(message);
 // console.log(greet(123));
 
 let studentName: string = "김철수";
-let StudentAge: number = 20;
+let studentAge: number = 20;
 let isGraduated: boolean = false;
 let scores: number[] = [90, 85, 92];
 
