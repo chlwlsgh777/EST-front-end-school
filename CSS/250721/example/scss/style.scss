@@ -2,3 +2,9 @@
 @import "mixin";
 @import "header";
 @import "main";
+@import "functions";
+
+$margins:10px 20px;
+$margins: append($margins, 30px , comma );
+
+@debug $margins
